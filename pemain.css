@@ -269,7 +269,7 @@ aside img {
   margin: 4px 2rem;
 }
 
-.contact .alamat p a i:hover {
+.contact .alamat a {
   color: #01aaa2;
 }
 
@@ -277,6 +277,7 @@ aside img {
   font-size: 0.9rem;
   color: #bbb;
   padding: 20px;
+  align-items: end;
 }
 
 @keyframes scale-up-ver-bottom {
