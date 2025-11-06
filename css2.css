@@ -2,6 +2,7 @@ html {
   scroll-behavior: smooth;
 }
 
+/* all */
 * {
   margin: 0;
   padding: 0;
@@ -13,14 +14,14 @@ html {
 
 body {
   font-family: "poppins", sans-serif;
-  /* text-align: center; */
-  background-color: rgb(2, 52, 85);
-  min-height: 2000px;
+  /* background-color: rgb(2, 52, 85); */
   color: #ffffff;
+  text-align: justify;
+  min-height: 2000px;
   flex-direction: column;
   display: flex;
 }
-
+/* navigasi */
 .navbar {
   display: flex;
   justify-content: space-between;
