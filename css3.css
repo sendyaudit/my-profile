@@ -1,0 +1,291 @@
+html {
+  scroll-behavior: smooth;
+}
+
+/* all */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  outline: none;
+  border: none;
+}
+
+body {
+  font-family: "poppins", sans-serif;
+  background-color: rgb(2, 52, 85);
+  color: #ffffff;
+  /* text-align: justify; */
+  min-height: 200px;
+  flex-direction: column;
+  display: flex;
+}
+/* navigasi */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.2rem 7%;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-bottom: 1px solid rgb(0, 82, 102);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+.navbar .navbar-logo {
+  font-size: 2rem;
+  font-weight: 1000;
+  color: #ffffff;
+}
+
+.navbar .navbar-logo :hover {
+  color: #6200ff;
+}
+/* .navbar .navbar-logo:hover {
+  color: rgb(2, 109, 136);
+}  */ /*buat hover "MY"*/
+
+.navbar .navbar-logo span {
+  color: #1da59e;
+  transition: color 0.3s ease;
+}
+
+.navbar .navbar-nav a {
+  color: #ffffff;
+  display: inline-block;
+  font-size: 1rem;
+  margin: 0 1rem;
+}
+
+.navbar .navbar-nav a:hover {
+  color: #ffffff;
+}
+
+.navbar .navbar-nav a::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid;
+  transform: scaleX(0);
+  transition: 0.2s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(0.8);
+}
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(
+      rgba(2, 52, 85, 0.71) 3%,
+      /* warna gradasi atas (hitam transparan) */ rgb(2, 52, 85) 100%
+    ),
+    url("sepeda.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  animation: fadeBg 0.5s ease-in forwards;
+  justify-content: center;
+}
+
+@keyframes fadeBg {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.hero::after {
+  content: ""; /*supaya bisa dikasi style maka konten kosong */
+  display: block;
+  position: absolute; /*dikasih absolute agar nempek ke bawah, dan posisi elemen asli diberi non static (relative)*/
+  height: 100%;
+  width: 100%;
+}
+
+.hero .content {
+  padding: 1rem 7%;
+  max-width: 60rem;
+  flex-direction: column; /* 👉 bikin elemen di dalamnya vertikal */
+  z-index: 2;
+  text-align: center;
+}
+
+.hero .content h1 {
+  color: #01aaa2;
+  font-size: 2em;
+  text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+  line-height: 1;
+  border-bottom: 1px solid rgb(0, 82, 102);
+  animation: shadow-drop-2-br 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+.hero .content h1 span {
+  color: #ffffff;
+}
+
+.hero p {
+  font-size: 1rem;
+  margin-top: 1.5rem;
+  line-height: 1.6;
+  /* font-weight: 6rem; */
+  /* text-shadow: 1px 1px 3px rgb(255, 255, 255); */
+  mix-blend-mode: color-dodge; /* buat singkronin warna pake different*/
+  color: #ffffff;
+  animation: shadow-drop-2-br 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both; /* pake animista */
+  z-index: 2;
+  max-width: 50rem;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tabel-sertif {
+  scrollbar-width: thin;
+  scrollbar-color: #01aaa286 #000000;
+  gap: 1rem;
+  display: flex;
+  scroll-snap-type: x mandatory;
+}
+
+/* Tabel umum */
+.hero table {
+  width: 100%;
+  border-spacing: 1rem;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  transition: transform 0.4s ease;
+}
+
+/* Supaya kolom mengikuti layar */
+.hero table th,
+.hero table td {
+  width: 33.33%; /* 3 kolom sama rata */
+  font-size: large;
+  color: #ffffff;
+  text-shadow: 1px 1px 3px rgb(255, 255, 255);
+}
+
+/* .hero table a {
+  color: #ffffff;
+  text-decoration: none;
+} */
+
+a,
+a:visited,
+a:hover {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/* Gambar responsive */
+.hero table tbody img {
+  width: 200%;
+  max-width: 180px; /* batas maksimal */
+  height: auto;
+  object-fit: cover;
+  border-radius: 1.5rem;
+  transition: 0.2s ease;
+  aspect-ratio: 5 / 3;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Hover */
+.hero table tbody img:hover {
+  animation: shadow-drop-2-br 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both; /* pake animista */
+  transform: scale(1.05);
+}
+
+footer {
+  /* background-color: #003d5b; */
+  color: white;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: center; /* Tengah secara horizontal */
+  gap: 80px; /* Jarak antar kolom */
+  margin-bottom: 30px;
+}
+.footer-item h3 {
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+.footer-item p {
+  margin: 0;
+  color: #01aaa2;
+}
+.footer-item p a {
+  color: #01aaa2;
+}
+.copyright {
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
+/* pc */
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
+  }
+  .hero table {
+    transform: scale(1);
+  }
+  .hero .content {
+    transform: scale(1);
+  }
+}
+
+/* tablet */
+@media (max-width: 768px) {
+  html {
+    font-size: 60.5%;
+  }
+  .hero table {
+    transform: scale(0.9);
+  }
+  .hero .content {
+    transform: scale(0.9);
+  }
+}
+/* hp */
+@media (max-width: 450px) {
+  html {
+    font-size: 55%;
+  }
+  .hero table {
+    transform: scale(1);
+  }
+  .hero .content {
+    transform: scale(0.7);
+  }
+  .hero table,
+  .hero table thead,
+  .hero table tbody,
+  .hero table tr,
+  .hero table td {
+    display: block; /* Bikin semua turun ke bawah */
+    width: 100%;
+  }
+
+  .hero table tr {
+    margin-bottom: 1rem;
+  }
+
+  .hero table tbody img {
+    max-width: 100%;
+    width: 100%;
+  }
+}
