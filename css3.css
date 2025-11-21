@@ -116,6 +116,9 @@ body {
   max-width: 60rem;
   flex-direction: column; /* 👉 bikin elemen di dalamnya vertikal */
   z-index: 2;
+}
+
+.hero .content {
   text-align: center;
 }
 
@@ -124,7 +127,6 @@ body {
   font-size: 2em;
   text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
   line-height: 1;
-  border-bottom: 1px solid rgb(0, 82, 102);
   animation: shadow-drop-2-br 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 .hero .content h1 span {
