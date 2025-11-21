@@ -186,7 +186,7 @@ aside img {
 } */
 
 .about {
-  padding: 20rem 7% 1.4rem;
+  padding: 5rem 7% 1.4rem;
   background-image: linear-gradient(
       0.8deg,
       rgba(2, 52, 85, 0.71),
@@ -312,6 +312,7 @@ aside img {
 }
 
 footer {
+  padding: 8rem 7% 1.4rem;
   /* background-color: #003d5b; */
   color: white;
   text-align: center;
