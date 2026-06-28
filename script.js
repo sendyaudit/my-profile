@@ -1,7 +1,5 @@
-// Feather icons
 feather.replace();
 
-// URL bersih tanpa #
 const sections = document.querySelectorAll("section, footer");
 
 const observer = new IntersectionObserver(
@@ -9,11 +7,8 @@ const observer = new IntersectionObserver(
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         const id = entry.target.id;
-        history.pushState(
-          null,
-          "",
-          window.location.pathname.split("/").slice(0, -1).join("/") + "/" + id,
-        );
+        // Sesuaikan untuk GitHub Pages
+        history.pushState(null, "", "/my-profile/" + id);
       }
     });
   },
@@ -30,11 +25,7 @@ document.querySelectorAll('a[href^="/"]').forEach((link) => {
     if (target) {
       e.preventDefault();
       target.scrollIntoView({ behavior: "smooth" });
-      history.pushState(
-        null,
-        "",
-        window.location.pathname.split("/").slice(0, -1).join("/") + "/" + id,
-      );
+      history.pushState(null, "", "/my-profile/" + id);
     }
   });
 });
