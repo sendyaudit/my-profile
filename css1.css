@@ -250,10 +250,11 @@ aside img {
   gap: 1rem;
   display: flex;
   scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
 }
 
 .about table {
-  max-width: 50rem;
+  max-width: 500px;
   text-align: center;
   margin-left: auto;
   margin-right: auto;
