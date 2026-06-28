@@ -222,3 +222,49 @@ footer {
     font-size: 55%;
   }
 }
+
+/* hp */
+@media (max-width: 450px) {
+  html {
+    font-size: 55%;
+  }
+
+  /* navbar */
+  .navbar {
+    padding: 0.5rem 4%;
+  }
+
+  .navbar .navbar-logo {
+    font-size: 1.2rem;
+  }
+
+  .navbar .navbar-nav a {
+    font-size: 0.75rem;
+    margin: 0 0.3rem;
+  }
+
+  /* hero */
+  .hero .content h1 {
+    font-size: 1.5em;
+    line-height: 1.3;
+  }
+
+  .hero .content p {
+    font-size: 0.9rem;
+  }
+
+  /* tabel project */
+  .hero .content table,
+  .hero .content th,
+  .hero .content td {
+    font-size: 0.75rem;
+    padding: 0.4rem;
+  }
+
+  /* footer */
+  .footer-container {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+}
