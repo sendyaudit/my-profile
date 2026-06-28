@@ -32,3 +32,8 @@ document.querySelectorAll('a[href^="#"]').forEach((link) => {
     }
   });
 });
+
+function scrollTable(amount) {
+  const container = document.getElementById("tableContainer");
+  container.scrollBy({ left: amount, behavior: "smooth" });
+}
