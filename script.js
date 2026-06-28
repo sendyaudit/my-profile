@@ -7,7 +7,6 @@ const observer = new IntersectionObserver(
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         const id = entry.target.id;
-        // Sesuaikan untuk GitHub Pages
         history.pushState(null, "", "/my-profile/" + id);
       }
     });
