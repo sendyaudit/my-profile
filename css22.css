@@ -26,7 +26,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.2rem 7%;
+  padding: 0.7rem 7%;
   background-color: rgba(0, 0, 0, 0.5);
   border-bottom: 1px solid rgb(0, 82, 102);
   position: fixed;
@@ -54,7 +54,7 @@ body {
 .navbar .navbar-nav a {
   color: #ffffff;
   display: inline-block;
-  font-size: 1rem;
+  font-size: 1.3rem;
   margin: 0 1rem;
 }
 
@@ -80,10 +80,8 @@ body {
   display: flex;
   align-items: center;
   background-repeat: no-repeat;
-  background-image: linear-gradient(
-      rgba(2, 52, 85, 0.65) 3%,
-      rgb(2, 52, 85) 150%
-    ),
+  background-image:
+    linear-gradient(rgba(2, 52, 85, 0.65) 3%, rgb(2, 52, 85) 150%),
     url("https://png.pngtree.com/png-clipart/20220621/original/pngtree-online-education-computer-vector-course-png-image_8166585.png");
   background-size: cover;
   background-position: center;
@@ -157,7 +155,7 @@ body {
 
 .hero .content td a {
   color: #1da59e;
-  justify-content: left;
+  margin-left: 1rem;
   /* width: 20px;
   height: 10px; */
   border-radius: 15rem;
@@ -198,6 +196,7 @@ footer {
 }
 .footer-item p a {
   color: #01aaa2;
+  margin-left: 1rem;
 }
 .copyright {
   font-size: 0.9rem;

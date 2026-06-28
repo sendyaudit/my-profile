@@ -2,10 +2,13 @@ feather.replace();
 
 const sections = document.querySelectorAll("section, footer");
 
+// Cek apakah di GitHub Pages atau lokal
+const isGithubPages = window.location.hostname === "sendyaudit.github.io";
+
 const observer = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
-      if (entry.isIntersecting) {
+      if (entry.isIntersecting && isGithubPages) {
         const id = entry.target.id;
         history.pushState(null, "", "/my-profile/" + id);
       }
@@ -16,7 +19,6 @@ const observer = new IntersectionObserver(
 
 sections.forEach((section) => observer.observe(section));
 
-// Klik navbar scroll smooth
 document.querySelectorAll('a[href^="#"]').forEach((link) => {
   link.addEventListener("click", (e) => {
     const id = link.getAttribute("href").replace("#", "");
@@ -24,7 +26,9 @@ document.querySelectorAll('a[href^="#"]').forEach((link) => {
     if (target) {
       e.preventDefault();
       target.scrollIntoView({ behavior: "smooth" });
-      history.pushState(null, "", "/my-profile/" + id);
+      if (isGithubPages) {
+        history.pushState(null, "", "/my-profile/" + id);
+      }
     }
   });
 });

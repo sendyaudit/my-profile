@@ -26,7 +26,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.2rem 7%;
+  padding: 0.7rem 7%;
   background-color: rgba(0, 0, 0, 0.5);
   border-bottom: 1px solid rgb(0, 82, 102);
   position: fixed;
@@ -57,7 +57,7 @@ body {
 .navbar .navbar-nav a {
   color: #ffffff;
   display: inline-block;
-  font-size: 1rem;
+  font-size: 1.3rem;
   margin: 0 1rem;
 }
 
@@ -84,7 +84,8 @@ body {
   display: flex; /*biar layar vertical*/
   align-items: center;
   background-repeat: no-repeat;
-  background-image: linear-gradient(
+  background-image:
+    linear-gradient(
       rgba(2, 52, 85, 0.71) 3%,
       /* warna gradasi atas (hitam transparan) */ rgb(2, 52, 85) 100%
     ),
@@ -110,12 +111,14 @@ body {
   position: absolute; /*dikasih absolute agar nempek ke bawah, dan posisi elemen asli diberi non static (relative)*/
   height: 100%;
   width: 100%;
+  align-items: center;
 }
 
 .hero .content {
-  padding: 1rem 7%;
-  max-width: 50rem;
+  padding: 2rem 7%;
+  max-width: 100%;
   flex-direction: column; /* 👉 bikin elemen di dalamnya vertikal */
+  align-items: center;
 }
 
 .hero .content h1 {
@@ -138,7 +141,7 @@ body {
 }
 
 .hero .content p {
-  font-size: 1rem;
+  font-size: 1.3rem;
   margin-top: 1rem;
   line-height: 1.5;
   font-weight: 300;
@@ -186,8 +189,9 @@ aside img {
 } */
 
 .about {
-  padding: 5rem 7% 1.4rem;
-  background-image: linear-gradient(
+  padding: 2rem 7% 1.4rem;
+  background-image:
+    linear-gradient(
       0.8deg,
       rgba(2, 52, 85, 0.71),
       /* warna gradasi atas (hitam transparan) */ rgb(2, 52, 85) 100%
@@ -201,6 +205,10 @@ aside img {
   min-height: 100vh;
   display: block;
   justify-content: center;
+  display: flex; /* tambah ini */
+  flex-direction: column; /* tambah ini */
+  justify-content: center; /* tengah vertikal */
+  align-items: center; /* tengah horizontal */
 }
 
 .about h1 {
@@ -220,7 +228,7 @@ aside img {
 }
 
 .about p {
-  font-size: 1rem;
+  font-size: 1.3rem;
   margin-top: 1.5rem;
   line-height: 1.6;
   font-weight: 350;
@@ -316,9 +324,14 @@ footer {
   padding: 6rem 7% 1.4rem;
   /* background-color: #003d5b; */
   color: white;
-  text-align: center;
   margin-left: auto;
   margin-right: auto;
+  min-height: 100vh;
+  display: block;
+  display: flex; /* tambah ini */
+  flex-direction: column; /* tambah ini */
+  justify-content: center; /* tengah vertikal */
+  align-items: center; /* tengah horizontal */
 }
 
 .footer-container {
@@ -339,6 +352,7 @@ footer {
 }
 .footer-item p a {
   color: #01aaa2;
+  margin-left: 1rem;
 }
 .copyright {
   font-size: 0.9rem;
